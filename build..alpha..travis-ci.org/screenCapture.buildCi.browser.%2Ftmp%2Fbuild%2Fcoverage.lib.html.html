@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-csslint/gulp-csslint/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-csslint/node_modules/gulp-csslint/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-csslint">npmtest-gulp-csslint (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-csslint/gulp-csslint/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-csslint/node_modules/gulp-csslint/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.1% <small>(11 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-csslint/gulp-csslint/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-csslint/node_modules/gulp-csslint/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -515,151 +513,152 @@ var through = require('through2');
 var csslint = require('csslint').CSSLint;
 var RcLoader = require('rcloader');
 &nbsp;
-<span class="fstat-no" title="function not covered" >function validateFormatter(formatter) {</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof formatter !== 'object' || !formatter.id || !formatter.startFormat || !formatter.endFormat || !formatter.endFormat || !formatter.formatResults) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('Invalid formatter: formatters need to be objects, and contain "id", "name", "startFormat", "endFormat" and "formatResults"');</span>
+<span class="fstat-no" title="function not covered">function validateFormatter(formatter) {</span>
+<span class="cstat-no" title="statement not covered">  if (typeof formatter !== 'object' || !formatter.id || !formatter.startFormat || !formatter.endFormat || !formatter.endFormat || !formatter.formatResults) {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('Invalid formatter: formatters need to be objects, and contain "id", "name", "startFormat", "endFormat" and "formatResults"');</span>
   }
 }
 &nbsp;
-var cssLintPlugin = <span class="fstat-no" title="function not covered" >function(options) {</span>
-<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >  var rcLoader = new RcLoader('.csslintrc', options, { loader: 'async' });</span>
-<span class="cstat-no" title="statement not covered" >  return through.obj(<span class="fstat-no" title="function not covered" >function(file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >    if (file.isNull()) <span class="cstat-no" title="statement not covered" >return cb(null, file); </span></span>// pass along
-<span class="cstat-no" title="statement not covered" >    if (file.isStream()) <span class="cstat-no" title="statement not covered" >return cb(new gutil.PluginError('gulp-csslint: Streaming not supported'), file);</span></span>
+var cssLintPlugin = <span class="fstat-no" title="function not covered">function(options) {</span>
+<span class="cstat-no" title="statement not covered">  options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  var rcLoader = new RcLoader('.csslintrc', options, { loader: 'async' });</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(<span class="fstat-no" title="function not covered">function(file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">    if (file.isNull()) <span class="cstat-no" title="statement not covered">return cb(null, file); </span></span>// pass along
+<span class="cstat-no" title="statement not covered">    if (file.isStream()) <span class="cstat-no" title="statement not covered">return cb(new gutil.PluginError('gulp-csslint: Streaming not supported'), file);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var ruleset = {};</span>
+<span class="cstat-no" title="statement not covered">    var ruleset = {};</span>
     // Build a list of all available rules
-<span class="cstat-no" title="statement not covered" >    csslint.getRules().forEach(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered" >      ruleset[rule.id] = 1;</span>
+<span class="cstat-no" title="statement not covered">    csslint.getRules().forEach(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered">      ruleset[rule.id] = 1;</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var content = file.contents.toString(enc);</span>
+<span class="cstat-no" title="statement not covered">    var content = file.contents.toString(enc);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!content) <span class="cstat-no" title="statement not covered" >return cb(null, file); </span></span>// pass along
+<span class="cstat-no" title="statement not covered">    if (!content) <span class="cstat-no" title="statement not covered">return cb(null, file); </span></span>// pass along
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    rcLoader.for(file.path, <span class="fstat-no" title="function not covered" >function(err, opts) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) <span class="cstat-no" title="statement not covered" >return cb(err);</span></span>
+<span class="cstat-no" title="statement not covered">    rcLoader.for(file.path, <span class="fstat-no" title="function not covered">function(err, opts) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) <span class="cstat-no" title="statement not covered">return cb(err);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for (var rule in opts) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!opts[rule]) {</span>
+<span class="cstat-no" title="statement not covered">      for (var rule in opts) {</span>
+<span class="cstat-no" title="statement not covered">        if (!opts[rule]) {</span>
           // Remove rules that are turned off
-<span class="cstat-no" title="statement not covered" >          delete ruleset[rule];</span>
+<span class="cstat-no" title="statement not covered">          delete ruleset[rule];</span>
         }
         else {
-<span class="cstat-no" title="statement not covered" >          ruleset[rule] = opts[rule];</span>
+<span class="cstat-no" title="statement not covered">          ruleset[rule] = opts[rule];</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      var report = csslint.verify(content, ruleset);</span>
+<span class="cstat-no" title="statement not covered">      var report = csslint.verify(content, ruleset);</span>
 &nbsp;
       // send status down-stream
-<span class="cstat-no" title="statement not covered" >      file.csslint = { report: report, success: !report.messages.length };</span>
+<span class="cstat-no" title="statement not covered">      file.csslint = { report: report, success: !report.messages.length };</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">      cb(null, file);</span>
     });
   });
 };
 &nbsp;
-cssLintPlugin.formatter = <span class="fstat-no" title="function not covered" >function(customFormatter, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var formatter = csslint.getFormatter('text');</span>
-<span class="cstat-no" title="statement not covered" >  var builtInFormatter = true;</span>
-<span class="cstat-no" title="statement not covered" >  var output;</span>
+cssLintPlugin.formatter = <span class="fstat-no" title="function not covered">function(customFormatter, options) {</span>
+<span class="cstat-no" title="statement not covered">  var formatter = csslint.getFormatter('text');</span>
+<span class="cstat-no" title="statement not covered">  var builtInFormatter = true;</span>
+<span class="cstat-no" title="statement not covered">  var output;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  options = options || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var logger = options.logger || process.stdout.write.bind(process.stdout);</span>
-<span class="cstat-no" title="statement not covered" >  if (customFormatter) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof customFormatter === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      formatter = customFormatter;</span>
-<span class="cstat-no" title="statement not covered" >      builtInFormatter = false;</span>
+<span class="cstat-no" title="statement not covered">  var logger = options.logger || process.stdout.write.bind(process.stdout);</span>
+<span class="cstat-no" title="statement not covered">  if (customFormatter) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof customFormatter === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      formatter = customFormatter;</span>
+<span class="cstat-no" title="statement not covered">      builtInFormatter = false;</span>
     }
-    else <span class="cstat-no" title="statement not covered" >if (typeof customFormatter === 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      if (customFormatter === 'fail') {</span>
-<span class="cstat-no" title="statement not covered" >        return cssLintPlugin.failFormatter();</span>
+    else <span class="cstat-no" title="statement not covered">if (typeof customFormatter === 'string') {</span>
+<span class="cstat-no" title="statement not covered">      if (customFormatter === 'fail') {</span>
+<span class="cstat-no" title="statement not covered">        return cssLintPlugin.failFormatter();</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      formatter = csslint.getFormatter(customFormatter);</span>
+<span class="cstat-no" title="statement not covered">      formatter = csslint.getFormatter(customFormatter);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (typeof formatter === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >        throw new Error('Invalid reporter: ' + customFormatter);</span>
+<span class="cstat-no" title="statement not covered">      if (typeof formatter === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">        throw new Error('Invalid reporter: ' + customFormatter);</span>
       }
     }
-    else <span class="cstat-no" title="statement not covered" >if (typeof customFormatter === 'object') {</span>
-<span class="cstat-no" title="statement not covered" >      validateFormatter(customFormatter);</span>
-<span class="cstat-no" title="statement not covered" >      formatter = customFormatter;</span>
+    else <span class="cstat-no" title="statement not covered">if (typeof customFormatter === 'object') {</span>
+<span class="cstat-no" title="statement not covered">      validateFormatter(customFormatter);</span>
+<span class="cstat-no" title="statement not covered">      formatter = customFormatter;</span>
     }
     else {
-<span class="cstat-no" title="statement not covered" >      throw new Error('Invalid custom formatter passed, please pass `null` or `undefined` if you want to pass options while using default formatter.');</span>
+<span class="cstat-no" title="statement not covered">      throw new Error('Invalid custom formatter passed, please pass `null` or `undefined` if you want to pass options while using default formatter.');</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (builtInFormatter) {</span>
-<span class="cstat-no" title="statement not covered" >    output = [formatter.startFormat()];</span>
+<span class="cstat-no" title="statement not covered">  if (builtInFormatter) {</span>
+<span class="cstat-no" title="statement not covered">    output = [formatter.startFormat()];</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return through.obj(</span>
-<span class="fstat-no" title="function not covered" >    function(file, enc, cb) {</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(</span>
+<span class="fstat-no" title="function not covered">    function(file, enc, cb) {</span>
       // Only report if CSSLint was ran and errors were found
-<span class="cstat-no" title="statement not covered" >      if (file.csslint &amp;&amp; !file.csslint.success) {</span>
-<span class="cstat-no" title="statement not covered" >        if (builtInFormatter) {</span>
-<span class="cstat-no" title="statement not covered" >          output.push(formatter.formatResults(file.csslint.report, file.path, options));</span>
+<span class="cstat-no" title="statement not covered">      if (file.csslint &amp;&amp; !file.csslint.success) {</span>
+<span class="cstat-no" title="statement not covered">        if (builtInFormatter) {</span>
+<span class="cstat-no" title="statement not covered">          output.push(formatter.formatResults(file.csslint.report, file.path, options));</span>
         }
         else {
-<span class="cstat-no" title="statement not covered" >          formatter(file.csslint.report, file.path, options);</span>
+<span class="cstat-no" title="statement not covered">          formatter(file.csslint.report, file.path, options);</span>
         }
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">      return cb(null, file);</span>
     },
-<span class="fstat-no" title="function not covered" >    function(cb) {</span>
-<span class="cstat-no" title="statement not covered" >      if (builtInFormatter) {</span>
-<span class="cstat-no" title="statement not covered" >        output.push(formatter.endFormat());</span>
+<span class="fstat-no" title="function not covered">    function(cb) {</span>
+<span class="cstat-no" title="statement not covered">      if (builtInFormatter) {</span>
+<span class="cstat-no" title="statement not covered">        output.push(formatter.endFormat());</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        output</span>
-          .filter(<span class="fstat-no" title="function not covered" >function(str) {</span>
-<span class="cstat-no" title="statement not covered" >            return str;</span>
+<span class="cstat-no" title="statement not covered">        output</span>
+          .filter(<span class="fstat-no" title="function not covered">function(str) {</span>
+<span class="cstat-no" title="statement not covered">            return str;</span>
           })
           .forEach(logger);
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     }
   ).resume(); // Force flow-mode https://nodejs.org/docs/latest/api/stream.html#stream_event_end
 };
 &nbsp;
-cssLintPlugin.addRule = <span class="fstat-no" title="function not covered" >function(rule) {</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof rule !== 'object') {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('Invalid rule: rules need to be objects.');</span>
+cssLintPlugin.addRule = <span class="fstat-no" title="function not covered">function(rule) {</span>
+<span class="cstat-no" title="statement not covered">  if (typeof rule !== 'object') {</span>
+<span class="cstat-no" title="statement not covered">    throw new Error('Invalid rule: rules need to be objects.');</span>
   }
-<span class="cstat-no" title="statement not covered" >  csslint.addRule(rule);</span>
+<span class="cstat-no" title="statement not covered">  csslint.addRule(rule);</span>
 };
 &nbsp;
-cssLintPlugin.addFormatter = <span class="fstat-no" title="function not covered" >function(formatter) {</span>
-<span class="cstat-no" title="statement not covered" >  formatter = typeof formatter === 'string' ? require(formatter) : formatter;</span>
-<span class="cstat-no" title="statement not covered" >  validateFormatter(formatter);</span>
+cssLintPlugin.addFormatter = <span class="fstat-no" title="function not covered">function(formatter) {</span>
+<span class="cstat-no" title="statement not covered">  formatter = typeof formatter === 'string' ? require(formatter) : formatter;</span>
+<span class="cstat-no" title="statement not covered">  validateFormatter(formatter);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  csslint.addFormatter(formatter);</span>
+<span class="cstat-no" title="statement not covered">  csslint.addFormatter(formatter);</span>
 };
 &nbsp;
-cssLintPlugin.failFormatter = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >  return through.obj(<span class="fstat-no" title="function not covered" >function(file, enc, cb) {</span></span>
+cssLintPlugin.failFormatter = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(<span class="fstat-no" title="function not covered">function(file, enc, cb) {</span></span>
     // Nothing to report or no errors
-<span class="cstat-no" title="statement not covered" >    if (!file.csslint || file.csslint.success) {</span>
-<span class="cstat-no" title="statement not covered" >      return cb(null, file);</span>
+<span class="cstat-no" title="statement not covered">    if (!file.csslint || file.csslint.success) {</span>
+<span class="cstat-no" title="statement not covered">      return cb(null, file);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return cb(new gutil.PluginError('gulp-csslint', 'CSSLint failed for ' + file.relative), file);</span>
+<span class="cstat-no" title="statement not covered">    return cb(new gutil.PluginError('gulp-csslint', 'CSSLint failed for ' + file.relative), file);</span>
   });
 };
 &nbsp;
 module.exports = cssLintPlugin;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 13:22:24 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:37:56 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
