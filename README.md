@@ -1,7 +1,7 @@
 # test coverage for  [gulp-csslint (v1.0.0)](https://github.com/lazd/gulp-csslint#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-csslint.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-csslint) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-csslint.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-csslint)
 #### CSSLint plugin for gulp
 
-[![NPM](https://nodei.co/npm/gulp-csslint.png?downloads=true)](https://www.npmjs.com/package/gulp-csslint)
+[![NPM](https://nodei.co/npm/gulp-csslint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-csslint)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-gulp-csslint/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-csslint/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-csslint/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-csslint/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-gulp-csslint/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-gulp-csslint/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-csslint/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-gulp-csslint/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-gulp-csslint%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-csslint/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-gulp-csslint/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-csslint%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.html](https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-gulp-csslint/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-gulp-csslint/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-csslint/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-gulp-csslint/build/screenCapture.npmPackageListing.svg)
 
@@ -27,8 +33,7 @@
 
 {
     "author": {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com"
+        "name": "Larry Davis"
     },
     "bugs": {
         "url": "https://github.com/lazd/gulp-csslint/issues"
@@ -76,13 +81,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "lazd",
-            "email": "lazdnet@gmail.com"
+            "name": "lazd"
         }
     ],
     "name": "gulp-csslint",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/lazd/gulp-csslint.git"
