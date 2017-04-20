@@ -1,4 +1,7 @@
-# test coverage for  [gulp-csslint (v1.0.0)](https://github.com/lazd/gulp-csslint#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-csslint.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-csslint) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-csslint.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-csslint)
+# npmtest-gulp-csslint
+
+#### basic test coverage for  [gulp-csslint (v1.0.0)](https://github.com/lazd/gulp-csslint#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-csslint.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-csslint) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-csslint.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-csslint)
+
 #### CSSLint plugin for gulp
 
 [![NPM](https://nodei.co/npm/gulp-csslint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-csslint)
